@@ -1,4 +1,8 @@
-/* ====== Reset ====== */
+/* =======================================
+   🎨 Fynco Front - Estilo Moderno e Limpo
+   ======================================= */
+
+/* ===== Reset global ===== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,15 +10,19 @@
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
 
-body {
+html, body, #root {
+  min-height: 100%;
   background-color: #ffffff;
   color: #1a1a1a;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  scroll-behavior: smooth;
 }
 
-/* ====== Header ====== */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===== Header ===== */
 .header {
   width: 100%;
   background: #ffffff;
@@ -48,7 +56,7 @@ nav a.active {
   color: #007b83;
 }
 
-/* ====== Container ====== */
+/* ===== Container base ===== */
 .container {
   width: min(1100px, 92%);
   margin: 60px auto;
@@ -62,74 +70,7 @@ nav a.active {
   justify-content: center;
 }
 
-/* ====== Hero ====== */
-.hero {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.hero h1 {
-  font-size: 2.6rem;
-  color: #007b83;
-  margin-bottom: 12px;
-}
-
-.hero p {
-  font-size: 1.1rem;
-  color: #444;
-  line-height: 1.6;
-}
-
-/* ====== Cards ====== */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
-  margin-bottom: 50px;
-}
-
-.card {
-  background: #f9fafb;
-  border: 1px solid #e8e8e8;
-  border-radius: 14px;
-  padding: 24px;
-  transition: 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-}
-
-.card h3 {
-  color: #007b83;
-  margin-bottom: 10px;
-}
-
-.card p,
-.card ul {
-  color: #444;
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-.card ul {
-  list-style: none;
-}
-
-.card li::before {
-  content: "• ";
-  color: #007b83;
-}
-
-/* ====== Buttons ====== */
-.actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  justify-content: center;
-}
-
+/* ===== Botões ===== */
 button {
   background: #007b83;
   color: white;
@@ -139,13 +80,24 @@ button {
   font-size: 1rem;
   cursor: pointer;
   transition: background 0.3s ease;
+  font-weight: 600;
 }
 
 button:hover {
   background: #009f9a;
 }
 
-/* ====== Loader ====== */
+button.ghost {
+  background: #fff;
+  color: #007b83;
+  border: 1px solid #cfe9e5;
+}
+
+button.ghost:hover {
+  background: #f3fdfb;
+}
+
+/* ===== Página: Working ===== */
 .loader {
   width: 48px;
   height: 48px;
@@ -165,4 +117,128 @@ button:hover {
 h2 {
   color: #007b83;
   margin-bottom: 10px;
+}
+
+.center p {
+  color: #555;
+  font-size: 1.1rem;
+}
+
+/* =======================================
+   🔹 Página: Quem Somos
+   ======================================= */
+
+/* HERO */
+.qs-hero { text-align:center; margin: 40px 0 24px; }
+.qs-eyebrow { color:#0C766A; font-weight:600; letter-spacing:.4px; margin-bottom:6px; }
+.qs-hero h1 { font-size:2.6rem; line-height:1.2; color:#0A2A2A; }
+.qs-sub { margin:12px auto 18px; color:#444; max-width:760px; font-size:1.05rem; line-height:1.6; }
+
+.qs-cta { display:flex; gap:12px; justify-content:center; margin-top:8px; flex-wrap: wrap; }
+.qs-cta button { background:#0C766A; color:#fff; border:none; border-radius:10px; padding:10px 16px; font-weight:600; cursor:pointer; }
+.qs-cta .ghost { background:#fff; color:#0C766A; border:1px solid #CFE9E5; }
+.qs-cta button:hover { filter:brightness(1.05); }
+
+/* VALORES / CARDS */
+.qs-cards {
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+  gap:20px;
+  margin:40px 0;
+}
+.qs-card {
+  background:#fff;
+  border:1px solid #eee;
+  border-radius:14px;
+  padding:20px;
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  transition:.25s ease;
+}
+.qs-card:hover {
+  transform: translateY(-4px);
+  box-shadow:0 8px 22px rgba(0,0,0,.05);
+}
+.qs-card h3 { margin:2px 0 6px; color:#0C766A; }
+.qs-card p { color:#555; font-size:.98rem; line-height:1.5; }
+
+/* NÚMEROS / MÉTRICAS */
+.qs-stats {
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(160px,1fr));
+  gap:12px;
+  margin:10px 0;
+}
+.qs-stat {
+  background:#F7FBFA;
+  border:1px solid #E6F2F0;
+  border-radius:12px;
+  padding:16px;
+  text-align:center;
+}
+.qs-stat .kpi { font-size:1.6rem; font-weight:800; color:#0A2A2A; }
+.qs-stat .label { color:#4b5563; font-size:.95rem; }
+.qs-note { text-align:center; color:#777; font-size:.9rem; margin-top:6px; }
+
+/* COMO FUNCIONA */
+.qs-steps { margin:42px 0 22px; }
+.qs-steps h2 { text-align:center; color:#0A2A2A; margin-bottom:16px; }
+.qs-steps ol {
+  list-style:none;
+  padding:0;
+  max-width:800px;
+  margin:0 auto;
+  display:grid;
+  gap:12px;
+}
+.qs-steps li {
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  background:#fff;
+  border:1px solid #eee;
+  border-radius:12px;
+  padding:14px;
+}
+.qs-steps .step {
+  width:32px;
+  height:32px;
+  border-radius:8px;
+  background:#E8F6F3;
+  color:#0C766A;
+  display:grid;
+  place-items:center;
+  font-weight:700;
+}
+.qs-steps p { color:#555; margin-top:4px; line-height:1.5; }
+
+.qs-steps-cta {
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  margin-top:18px;
+  flex-wrap: wrap;
+}
+
+/* CTA FINAL */
+.qs-final {
+  text-align:center;
+  background:#FBFDFC;
+  border:1px solid #E6F2F0;
+  border-radius:16px;
+  padding:32px 24px;
+  margin:50px 0;
+}
+.qs-final h2 { color:#0A2A2A; margin-bottom:8px; }
+.qs-final p { color:#555; margin-bottom:14px; font-size:1.05rem; }
+
+/* ===== Responsividade ===== */
+@media (max-width: 600px) {
+  .header { padding: 14px 20px; }
+  .logo { font-size: 1.3rem; }
+  nav a { margin-left: 14px; font-size: 0.95rem; }
+  .qs-hero h1 { font-size: 2rem; }
+  .qs-cta button { width: 100%; }
+  .qs-cards { grid-template-columns: 1fr; }
 }
