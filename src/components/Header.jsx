@@ -3,16 +3,13 @@ import { Link, useLocation } from "react-router-dom";
 export default function Header() {
   const { pathname } = useLocation();
   return (
-    <header className="hdr">
-      <div className="brand">
-        <span className="logo">F</span>
-        <strong>Fynco</strong>
-      </div>
+    <header className="header">
+      <div className="logo">Fynco</div>
       <nav>
-        <Link className={pathname==="/quem-somos" ? "active" : ""} to="/quem-somos">
+        <Link to="/quem-somos" className={pathname === "/quem-somos" ? "active" : ""}>
           Quem Somos
         </Link>
-        <Link className={pathname==="/working" ? "active" : ""} to="/working">
+        <Link to="/working" className={pathname === "/working" ? "active" : ""}>
           Working…
         </Link>
       </nav>

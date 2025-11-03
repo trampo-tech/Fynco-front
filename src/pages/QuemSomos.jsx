@@ -2,57 +2,44 @@ import { useNavigate } from "react-router-dom";
 
 export default function QuemSomos() {
   const navigate = useNavigate();
-  const goWorking = () => navigate("/working");
+  const go = () => navigate("/working");
 
   return (
     <main className="container">
-      <section className="card">
+      <section className="hero">
         <h1>Quem Somos</h1>
-        <p className="muted">
-          A <strong>Fynco</strong> nasceu para simplificar a emissão de documentos fiscais
-          (NF-e, CT-e, MDF-e), conectando empresas a processos confiáveis,
-          rápidos e transparentes.
+        <p>
+          A <strong>Fynco</strong> nasceu para simplificar a emissão de documentos fiscais,
+          oferecendo tecnologia acessível e confiável para empresas que buscam agilidade,
+          segurança e conformidade com a legislação.
         </p>
+      </section>
 
-        <div className="grid">
-          <div className="box">
-            <h3>Missão</h3>
-            <p>Desburocratizar o fiscal com tecnologia simples e acessível.</p>
-          </div>
-          <div className="box">
-            <h3>Visão</h3>
-            <p>Ser a plataforma fiscal favorita de PMEs na América Latina.</p>
-          </div>
-          <div className="box">
-            <h3>Valores</h3>
-            <ul>
-              <li>Confiabilidade</li>
-              <li>Transparência</li>
-              <li>Segurança</li>
-              <li>Velocidade</li>
-            </ul>
-          </div>
+      <section className="cards">
+        <div className="card">
+          <h3>Missão</h3>
+          <p>Facilitar o universo fiscal com soluções inteligentes e humanas.</p>
         </div>
-
-        <hr />
-
-        <h2>O que estamos construindo</h2>
-        <p className="muted">
-          API moderna em PHP para emissão/consulta, front rápido em React, e um fluxo
-          seguro para certificados A1. Tudo pensado para <em>developer experience</em>.
-        </p>
-
-        {/* Botões principais (com conteúdo na página) */}
-        <div className="actions">
-          <button className="btn ghost" onClick={goWorking}>Time</button>
-          <button className="btn ghost" onClick={goWorking}>Carreiras</button>
-          <button className="btn ghost" onClick={goWorking}>Blog</button>
-          <button className="btn ghost" onClick={goWorking}>Parcerias</button>
+        <div className="card">
+          <h3>Visão</h3>
+          <p>Ser referência em automação fiscal e integração de sistemas no Brasil.</p>
         </div>
+        <div className="card">
+          <h3>Valores</h3>
+          <ul>
+            <li>Transparência</li>
+            <li>Inovação</li>
+            <li>Segurança</li>
+            <li>Agilidade</li>
+          </ul>
+        </div>
+      </section>
 
-        <p className="hint">
-          * Conforme pedido: <strong>cada botão extra</strong> leva para a tela <code>Working…</code>.
-        </p>
+      <section className="actions">
+        <button onClick={go}>Nosso Time</button>
+        <button onClick={go}>Carreiras</button>
+        <button onClick={go}>Blog</button>
+        <button onClick={go}>Contato</button>
       </section>
     </main>
   );

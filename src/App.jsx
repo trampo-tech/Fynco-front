@@ -8,16 +8,9 @@ export default function App() {
     <>
       <Header />
       <Routes>
-        {/* 👉 Quando acessar /, redireciona para /quem-somos */}
         <Route path="/" element={<Navigate to="/quem-somos" replace />} />
-        
-        {/* Página principal */}
         <Route path="/quem-somos" element={<QuemSomos />} />
-        
-        {/* Tela de Working */}
         <Route path="/working" element={<Working />} />
-
-        {/* Se a rota não existir, redireciona pra /quem-somos */}
         <Route path="*" element={<Navigate to="/quem-somos" replace />} />
       </Routes>
     </>
