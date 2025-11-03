@@ -1,23 +1,18 @@
+import { Routes, Route, Navigate } from "react-router-dom";
+import QuemSomos from "./pages/QuemSomos.jsx";
+import Working from "./pages/Working.jsx";
+import Header from "./components/Header.jsx";
+
 export default function App() {
-  const apiUrl = import.meta.env.VITE_API_URL; // opcional: mostre a URL da API se setada
-
   return (
-    <main className="wrap">
-      <div className="card">
-        <div className="spinner" aria-hidden />
-        <h1>Working…</h1>
-        <p>Estamos preparando tudo por aqui.</p>
-
-        {apiUrl ? (
-          <p className="hint">
-            API: <code>{apiUrl}</code>
-          </p>
-        ) : (
-          <p className="hint dim">Defina <code>VITE_API_URL</code> nas envs do Render.</p>
-        )}
-      </div>
-
-      <footer>Fynco • {new Date().getFullYear()}</footer>
-    </main>
+    <>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Navigate to="/quem-somos" replace />} />
+        <Route path="/quem-somos" element={<QuemSomos />} />
+        <Route path="/working" element={<Working />} />
+        <Route path="*" element={<Navigate to="/quem-somos" replace />} />
+      </Routes>
+    </>
   );
 }
